@@ -60,7 +60,7 @@ public class PanTadeuszHome implements PanTadeusz {
             StringBuilder lorem = new StringBuilder();
 
             for (int i = 0; i < number; i++) {
-                if (word == 50) {
+                if (word == 46) {
                     word = 0;
                 }
 
