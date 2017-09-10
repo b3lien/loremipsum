@@ -41,11 +41,11 @@ public class LoremIpsumHome implements LoremIpsum {
         StringBuilder lorem = new StringBuilder();
 
         for (int i = 0; i < number; i++) {
-            if (sentence == 3){
+            if (sentence == 3) {
                 lorem.append("\n");
                 sentence = 0;
             }
-            lorem.append(loremIpsumSentences[sentence]+".");
+            lorem.append(loremIpsumSentences[sentence] + ".");
 
         }
         return lorem.toString();
@@ -78,8 +78,4 @@ public class LoremIpsumHome implements LoremIpsum {
         return Arrays.toString(loremIpsumWords);
     }
 
-    public static void main(String[] args) {
-        LoremIpsum loremIpsum = new LoremIpsumHome();
-        System.out.println(loremIpsum.generateSentences(10));
-    }
 }

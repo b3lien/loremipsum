@@ -3,25 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Lorem Ipsum</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <style>
+        body {
+            background-color: bisque;
+            background-image: url(https://qzprod.files.wordpress.com/2017/07/pen-on-journal.jpg?quality=80&strip=all);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            padding-left: 300px;
+        }
+
+        form {
+            display: inline;
+        }
+
+        #submit {
+            cursor: pointer;
+        }
+
+        #textarea {
+            border: 2px solid grey;
+            border-radius: 5px;
+        }
+        div {
+            display: inline;
+        }
+
+        input, select {
+            width: 200px;
+            height: 30px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+        }
+
+        #pantadeusz {
+            width: 200px;
+            height: 30px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 70px
+        }
+
+    </style>
 </head>
 <body>
 <h1>Lorem Ipsum Generator</h1>
-<form action="/generate" th:method="get">
+<form action="/generate" th:method="get" id="form">
 
-    <textarea cols="120" rows="25" th:text="${text}" disabled>
+    <textarea cols="120" rows="25" th:text="${text}" disabled id="textarea">
     </textarea><br>
-
-    <input name="number" type="number" value="1" step="1" min="0"><br>
+<div>
+    <input name="number" type="number" value="1" step="1" min="0">
 
     <select name="option">
-        <option value="1">PARAGRAPHS</option>
-        <option value="2">SENTENCES</option>
-        <option value="3">WORDS</option>
+        <option value="1">Paragraphs</option>
+        <option value="2">Sentences</option>
+        <option value="3">Words</option>
     </select>
 
-    <input type="submit" value="GENERATE!"><br>
+    <input type="submit" value="Generate" id="submit">
 
+    <a href="/pl"><input type="button" value="Pan Tadeusz" id="pantadeusz"></a>
+</div>
 </form>
 </body>
 </html>
