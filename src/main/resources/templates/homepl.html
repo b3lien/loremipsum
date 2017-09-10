@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Lorem Ipsum</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Lorem Ipsum Generator</h1>
 <form action="/generate" th:method="get">
 
     <textarea cols="120" rows="25" th:text="${text}" disabled>
@@ -15,13 +13,14 @@
     <input name="number" type="number" value="1" step="1" min="0"><br>
 
     <select name="option">
-        <option value="1">PARAGRAPHS</option>
-        <option value="2">SENTENCES</option>
-        <option value="3">WORDS</option>
+        <option value="1">Akapity</option>
+        <option value="2">Zdania</option>
+        <option value="3">Słowa</option>
     </select>
 
     <input type="submit" value="GENERATE!"><br>
 
 </form>
+
 </body>
 </html>
